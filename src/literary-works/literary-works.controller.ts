@@ -11,7 +11,7 @@ import { LiteraryWorksService } from './literary-works.service';
 import { CreateLiteraryWorkDto } from './dto/create-literary-work.dto';
 import { ApiTags } from '@nestjs/swagger';
 
-@ApiTags('Obras Literárias')
+@ApiTags('Libros')
 @Controller('literary-works')
 export class LiteraryWorksController {
   constructor(private readonly literaryWorksService: LiteraryWorksService) {}

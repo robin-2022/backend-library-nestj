@@ -73,7 +73,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ReadersController.prototype, "remove", null);
 ReadersController = __decorate([
-    (0, swagger_1.ApiTags)('Leitores'),
+    (0, swagger_1.ApiTags)('Readers'),
     (0, common_1.Controller)('readers'),
     __metadata("design:paramtypes", [readers_service_1.ReadersService])
 ], ReadersController);

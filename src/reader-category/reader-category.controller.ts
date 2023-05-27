@@ -11,7 +11,7 @@ import { ApiTags } from '@nestjs/swagger';
 import { ReaderCategoryService } from './reader-category.service';
 import { ReaderCategory } from './entities/reader-category.entity';
 
-@ApiTags('Categoria de Leitores')
+@ApiTags('Readers categori')
 @Controller('reader-category')
 export class ReaderCategoryController {
   constructor(private readonly readerCategoryService: ReaderCategoryService) {}

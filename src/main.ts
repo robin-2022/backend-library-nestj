@@ -3,6 +3,8 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
+
+  const port = process.env.PORT || 9000;
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
@@ -14,7 +16,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('library', app, document);
 
-  await app.listen(9000, () => {
+  await app.listen(port, () => {
     console.log('Running on http://localhost:9000');
   });
 }

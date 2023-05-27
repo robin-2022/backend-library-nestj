@@ -73,7 +73,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], LiteraryWorksController.prototype, "remove", null);
 LiteraryWorksController = __decorate([
-    (0, swagger_1.ApiTags)('Obras Literárias'),
+    (0, swagger_1.ApiTags)('Libros'),
     (0, common_1.Controller)('literary-works'),
     __metadata("design:paramtypes", [literary_works_service_1.LiteraryWorksService])
 ], LiteraryWorksController);

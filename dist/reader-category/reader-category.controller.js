@@ -78,7 +78,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ReaderCategoryController.prototype, "remove", null);
 ReaderCategoryController = __decorate([
-    (0, swagger_1.ApiTags)('Categoria de Leitores'),
+    (0, swagger_1.ApiTags)('Readers categori'),
     (0, common_1.Controller)('reader-category'),
     __metadata("design:paramtypes", [reader_category_service_1.ReaderCategoryService])
 ], ReaderCategoryController);
