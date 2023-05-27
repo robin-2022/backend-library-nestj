@@ -52,16 +52,20 @@ export class LiteraryCategoryService {
     }
   }
 
-  async findOne(id: string) {
-    try {
-      const response = this.literaryCategoryRepository.findOne(id);
+  // async findOne(id: string) {
+  //   try {
+  //     const response = this.literaryCategoryRepository.findOne(id);
 
-      return response;
-    } catch (error) {
-      return error;
-    }
+  //     return response;
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // }
+  async findBy(description: string) {
+    const response = this.literaryCategoryRepository.findByName(description);
+
+    return response;
   }
-
   async remove(id: string) {
     try {
       const response = await this.literaryCategoryRepository.remove(id);

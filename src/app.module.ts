@@ -8,9 +8,11 @@ import { LiteraryCategoryModule } from './literary-category/literary-category.mo
 import { MongooseModule } from '@nestjs/mongoose';
 import { ReaderCategoryModule } from './reader-category/reader-category.module';
 import { EmployeesModule } from './employees/employees.module';
+import { ApiModule } from './auth/auth.module';
 
 @Module({
   imports: [
+    ApiModule,
     ReadersModule,
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.DATABASE_URL),

@@ -47,15 +47,23 @@ export class LiteraryCategoryRepository {
     }
   }
 
-  async findOne(id: string): Promise<LiteraryCategory> {
+  // async findOne(name: string): Promise<LiteraryCategory> {
+  //   try {
+  //     const category = this.model.findByName(name);
+
+  //     if (!category) throw new NotFoundException('Categoria não encontrada');
+
+  //     return category;
+  //   } catch (error) {
+  //     throw new Error(error);
+  //   }
+  // }
+  async findByName(description: string) {
     try {
-      const category = this.model.findById(id);
-
-      if (!category) throw new NotFoundException('Categoria não encontrada');
-
-      return category;
+      const employee = await this.model.findOne({ description: description }).exec();
+      return employee;
     } catch (error) {
-      throw new Error(error);
+      return error;
     }
   }
 

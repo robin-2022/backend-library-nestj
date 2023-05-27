@@ -6,16 +6,16 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Biblioteca Zá Marinho')
+    .setTitle('library')
     .setDescription('Gerenciamento de empréstimos de obras literárias')
     .setVersion('1.0')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('library', app, document);
 
-  await app.listen(3000, () => {
-    console.log('Running on http://localhost:3000');
+  await app.listen(9000, () => {
+    console.log('Running on http://localhost:9000');
   });
 }
 bootstrap();

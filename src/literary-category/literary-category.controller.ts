@@ -6,12 +6,13 @@ import {
   Param,
   Delete,
   Put,
+  Query
 } from '@nestjs/common';
 import { LiteraryCategoryService } from './literary-category.service';
 import { ApiTags } from '@nestjs/swagger';
 import { LiteraryCategory } from './entities/literary-category.entity';
 
-@ApiTags('Categoria de Obras Literárias')
+@ApiTags('Categoria')
 @Controller('literary-category')
 export class LiteraryCategoryController {
   constructor(
@@ -33,9 +34,15 @@ export class LiteraryCategoryController {
     return this.literaryCategoryService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.literaryCategoryService.findOne(id);
+  // @Get(':id')
+  // findOne(@Param('id') id: string) {
+  //   return this.literaryCategoryService.findOne(id);
+  // }
+  @Get('search')
+  findByName(@Query('description') description: string) {
+    const response = this.literaryCategoryService.findBy(description);
+
+    return response;
   }
 
   @Delete(':id')
